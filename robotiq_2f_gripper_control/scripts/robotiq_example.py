@@ -24,20 +24,20 @@ def test_gripper() :
 
     gripper = Robotiq2FingerGripperDriver(comport='/dev/ttyUSB0', init_requested=False)
 
-    input('Enter to start')
+    # input('Enter to start')
 
     gripper.open()
 
-    print('Second mode, block expected')
-    input('Enter to start')
+    # print('Second mode, block expected')
+    # input('Enter to start')
 
-    gripper.goto(pos=0.00, speed=0.01, force=100, block=False)
-    gripper.goto(pos=0.08, speed=0.01, force=100, block=False)
+    gripper.goto(pos=0.0, speed=0.01, force=1, block=False)
+    # gripper.goto(pos=0.08, speed=0.01, force=1, block=False)
 
-    print('Third mode')
-    input('Enter to start, non block expected')
-    gripper.close(speed=0.01, block = False)
-    gripper.open(block=False)
+    # print('Third mode')
+    # input('Enter to start, non block expected')
+    # gripper.close(speed=0.01, block = False)
+    # gripper.open(block=False)
 
 
 
